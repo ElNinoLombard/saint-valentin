@@ -1,0 +1,155 @@
+.celebration-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff1744 0%, #ff69b4 50%, #ffc0cb 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  animation: background-pulse 3s ease-in-out infinite;
+}
+
+@keyframes background-pulse {
+  0%, 100% {
+    background: linear-gradient(135deg, #ff1744 0%, #ff69b4 50%, #ffc0cb 100%);
+  }
+  50% {
+    background: linear-gradient(135deg, #ff69b4 0%, #ff1744 50%, #ffc0cb 100%);
+  }
+}
+
+.celebration-hearts {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.exploding-heart {
+  position: absolute;
+  color: white;
+  animation: explode ease-out forwards;
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.celebration-content {
+  text-align: center;
+  z-index: 10;
+  padding: 2rem;
+  animation: fade-in 1s ease-in;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.big-heart {
+  animation: heartbeat 1.5s ease-in-out infinite;
+  display: inline-block;
+  margin-bottom: 2rem;
+  filter: drop-shadow(0 0 20px rgba(255, 23, 68, 0.5));
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.15);
+  }
+}
+
+.celebration-title {
+  font-size: 4rem;
+  color: white;
+  margin-bottom: 1rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.celebration-message {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+}
+
+.gif-container {
+  margin-top: 2rem;
+  animation: zoom-in 1s ease-in;
+}
+
+@keyframes zoom-in {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.celebration-gif {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 5px solid white;
+}
+
+@media (max-width: 768px) {
+  .big-heart svg {
+    width: 120px;
+    height: 120px;
+  }
+
+  .celebration-title {
+    font-size: 2.5rem;
+  }
+
+  .celebration-message {
+    font-size: 1.5rem;
+  }
+
+  .celebration-gif {
+    max-width: 300px;
+  }
+}
