@@ -29,7 +29,7 @@ function CelebrationPage() {
 
         <div className="gif-container">
           <img
-            src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXZ5ZjBpNWRnZTBqbHl6ZWl3YzB3YnVsM3hreGt5eGN0YnE5dGV3dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26u4cqiYI30juCOGY/giphy.gif"
+            src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaDA3Z3EzMzB2OGFod3preHNxbXN6ejZ3NXV3bWtmeGE5YnQ5dDJ4eiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/dvdcBNbAiNVT9Z0iwP/giphy.gif"
             alt="Love celebration"
             className="celebration-gif"
           />
